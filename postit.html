@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PostIt</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="postit.css">
+
+    <!-- CryptoJS 4.2.0 for encryption -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- Page Header -->
+        <header class="hero">
+            <div class="brand">
+                <span class="brand-icon">P</span>
+
+                <div>
+                    <h1>PostIt</h1>
+                    <p>Write it. Post it. Keep your thread.</p>
+                </div>
+            </div>
+
+            <span class="status-badge">● One User</span>
+        </header>
+
+
+        <!-- User Information: Entered only once -->
+        <section id="userSection" class="card">
+
+            <h2>Set Up Your Profile</h2>
+            <p>Enter your information once before posting.</p>
+
+            <!-- User information form -->
+            <form id="userForm">
+
+                <label>Full Name</label>
+                <input type="text" id="fullName"
+                       placeholder="Enter your full name" required>
+
+                <label>Date of Birth</label>
+                <input type="date" id="dateOfBirth" required>
+
+                <label>Year Level</label>
+                <select id="yearLevel" required>
+                    <option value="">Select year level</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+
+                <label>Gender</label>
+                <select id="gender" required>
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                </select>
+
+                <label>Username</label>
+                <input type="text" id="username"
+                       placeholder="Enter username" required>
+
+                <label>Password</label>
+                <input type="password" id="password"
+                       placeholder="Enter password" required>
+
+                <button type="submit" class="primary-btn">
+                    Continue to PostIt
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- Posting Section -->
+        <section id="postSection" class="hidden">
+
+            <!-- Welcome message -->
+            <div class="welcome-card">
+                <div>
+                    <small>YOUR ACCOUNT</small>
+                    <h2>Welcome, <span id="displayName"></span>!</h2>
+                    <p>Only you can post captions.</p>
+                </div>
+
+                <div class="profile-mark" id="profileMark">U</div>
+            </div>
+
+
+            <!-- Post Box -->
+            <div class="card">
+
+                <small>NEW POST</small>
+
+                <h2>Write a Caption</h2>
+
+                <textarea id="caption"
+                          maxlength="500"
+                          placeholder="Write your caption here..."></textarea>
+
+                <div class="post-actions">
+                    <span id="characterCount">0 / 500</span>
+
+                    <button type="button"
+                            id="postButton"
+                            class="primary-btn">
+                        POST
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Post Thread -->
+            <section class="card">
+
+                <div class="thread-heading">
+                    <div>
+                        <small>YOUR POSTS</small>
+                        <h2>Post Thread</h2>
+                    </div>
+
+                    <span id="threadCount">0 posts</span>
+                </div>
+
+                <!-- JavaScript adds posts here -->
+                <div id="postThread"></div>
+
+            </section>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>PostIt © 2026</p>
+            <p>Posting System</p>
+        </footer>
+
+    </main>
+
+    <!-- Connect JavaScript file -->
+    <script src="postit.js"></script>
+
+</body>
+</html>

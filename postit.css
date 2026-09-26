@@ -1,0 +1,236 @@
+/* PostIt Black and Pink Design */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+}
+
+.page {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+/* Header */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon,
+.profile-mark {
+    background: #ff1493;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+h1 {
+    color: #ff1493;
+    font-size: 32px;
+}
+
+.hero p,
+.card p,
+.welcome-card p {
+    color: #aaa;
+}
+
+.status-badge {
+    color: #ff69b4;
+}
+
+/* Cards */
+.card,
+.welcome-card {
+    background: #191919;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ff4da6;
+    margin-bottom: 8px;
+}
+
+.section-heading {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.heading-icon {
+    color: white;
+    background: #ff1493;
+    padding: 8px 10px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+/* Form */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    color: #ff69b4;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #252525;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff1493;
+}
+
+/* Buttons */
+.primary-btn {
+    background: #ff1493;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.primary-btn:hover {
+    background: #d60070;
+}
+
+/* Welcome */
+.welcome-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eyebrow {
+    color: #ff1493;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Post */
+.composer-top,
+.post-actions,
+.thread-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+textarea {
+    margin-top: 15px;
+    resize: vertical;
+}
+
+#characterCount,
+.thread-count {
+    color: #ff69b4;
+}
+
+.post-actions p {
+    margin-top: 15px;
+}
+
+/* Posts */
+.post-card {
+    background: #242424;
+    border-left: 4px solid #ff1493;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.post-label,
+.encrypted-label {
+    color: #ff1493;
+    font-weight: bold;
+}
+
+.encrypted-value {
+    display: block;
+    color: #ff69b4;
+    word-break: break-all;
+    margin-top: 8px;
+}
+
+.post-date {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Hide elements */
+.hidden {
+    display: none;
+}
+
+.sr-only {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #666;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .hero,
+    .welcome-card,
+    .post-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
